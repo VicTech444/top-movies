@@ -5,29 +5,19 @@
     color: #fff;
 }
 
-.dp-flex {
-    display: flex
-}
+.dp-flex { display: flex }
 
-.fd-column {
-    flex-direction: column
-}
+.fd-column { flex-direction: column }
 
-.jc-between {
-    justify-content: space-between
-}
+.jc-between { justify-content: space-between }
 
-.dp-grid {
-    display: grid
-}
+.dp-grid { display: grid }
 
-.fz-40 {
-    font-size: 60px
-}
+.hidden { display: none }
 
-.fz-24 {
-    font-size: 24px
-}
+.fz-40 { font-size: 60px }
+
+.fz-24 { font-size: 24px }
 
 .container {
     row-gap: 4rem;
@@ -53,7 +43,7 @@ header {
 
     & div {
         overflow: hidden;
-
+        
         & img {
             width: 100%;
             object-fit: cover;
@@ -65,3 +55,38 @@ header {
 
     }
 }
+
+.like-dislike { column-gap: 10px; }
+
+.bg-img {
+    align-items: flex-end;
+    background-size: cover;
+    aspect-ratio: 1 / 1.5;
+    transition: opacity 0.5s linear;
+    transition: transform 0.5s linear;
+
+    transform: scale(1.05);
+
+    &:hover {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    &:not(:hover){
+        opacity: 0.7;
+        
+    }
+}
+
+.divWithInfo {
+    width: 100%;
+    row-gap: 7px;
+    padding: 3px 3px 3px 8px;
+    background-color: rgb(0, 0, 0);
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+.like-on { fill: #3cad2c; }
+
+.dislike-on { fill: #e31b1b; }
