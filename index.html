@@ -5,26 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Top shows</title>
 </head>
 
 <body>
-    <div class="container dp-flex fd-column">
+    <div class="movie-top-container dp-flex fd-column">
         <header class="dp-flex fd-column">
-            <div class="big-size-text fz-40">
-                <p>Top movies for me</p>
+            <div class="big-size-text fz-60">
+                <p>Top shows for me</p>
             </div>
             <div class="normal-size-text dp-flex fz-24 jc-between">
                 <label>Done from a front-end candidate</label>
-                <div class="grid-table-menu dp-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px" ><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fff" d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+                <div class="grid-table-btn dp-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        width="20px"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#fff"
+                            d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                    </svg>
                 </div>
             </div>
         </header>
-        <main class="movies-container dp-grid">
+        <main class="movie-list-container dp-grid as-center">
 
         </main>
-    </div>  
+        <div class="grid-table-movies-container dp-grid hidden as-center">
+            <table>
+                <thead id="tableHead">
+                    <tr>
+                        <th class="grid-item-1"></th>
+                        <th class="grid-item-2">Title</th>
+                        <th class="grid-item-3">Year</th>
+                        <th class="grid-item-4">Likes</th>
+                        <th class="grid-item-5">Dislikes</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="movie-homepage hidden">
+        <div class="background-image dp-flex width-100 ai-end">
+            <div class="fz-60" id="movie-title">
+
+            </div>
+        </div>
+        <div class="movie-body dp-flex fd-column rg-25">
+            <div class="movie-header dp-flex fd-column">
+                <div id="year-aired">
+
+                </div>
+                <div id="likeOnMovie" class="dp-flex">
+
+                </div>
+            </div>
+            <div id="movie-description">
+
+            </div>
+            <div class="review-menu dp-flex fd-column jc rg-25">
+                <div class="review-options dp-flex">
+                    <div class="first-option">
+                        <button class="btn-styles" id="review-list">Reviews</button>
+
+                    </div>
+                    <div class="second-option">
+                        <button class="btn-styles" id="review-form">Submit a review</button>
+                    </div>
+                </div>
+                <div class="review-list dp-grid rg-25">
+
+                </div>
+                <div class="review-form dp-flex fd-column hidden as-center">
+                    <div class="name dp-flex fd-column">
+                        <label class="fz-24">Name: </label>
+                        <input type="text" class="general-styles" id="name-input" required minlength="5" maxlength="50">
+                    </div>
+                    <div class="message dp-flex fd-column">
+                        <label class="fz-24">Message: </label>
+                        <textarea name="msg" id="textarea-msg" cols="15" rows="4" class="general-styles" required
+                            minlength="5" maxlength="500"></textarea>
+                    </div>
+                    <div class="submit dp-flex as-center">
+                        <button id="submit-btn" class="btn-styles">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 
