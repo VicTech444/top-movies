@@ -6,42 +6,81 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-.dp-flex { display: flex }
+.dp-flex {
+    display: flex
+}
 
-.fd-column { flex-direction: column }
+.fd-column {
+    flex-direction: column
+}
 
-.jc-between { justify-content: space-between }
+.jc-between {
+    justify-content: space-between
+}
 
-.as-center { align-self: center }
+.as-center {
+    align-self: center
+}
 
-.ai-end { align-items: flex-end }
+.ai-end {
+    align-items: flex-end
+}
 
-.dp-grid { display: grid }
+.dp-grid {
+    display: grid
+}
 
-.hidden { display: none }
+.hidden {
+    display: none
+}
 
-.fz-60 { font-size: 60px }
+.fz-60 {
+    font-size: 60px
+}
 
-.fz-24 { font-size: 24px }
+.fz-24 {
+    font-size: 24px
+}
 
-.width-100 { width: 100% }
+.width-100 {
+    width: 100%
+}
 
-.rg-25 { row-gap: 25px }
+.rg-25 {
+    row-gap: 25px
+}
 
-.like-dislike { column-gap: 10px }
+.like-dislike {
+    column-gap: 10px
+}
 
-.like-on { fill: #3cad2c }
+.like-on {
+    fill: #3cad2c
+}
 
-.dislike-on { fill: #e31b1b }
+.dislike-on {
+    fill: #e31b1b
+}
 
 body {
     min-height: 100vh;
     background-color: #050505;
+    overflow-y: scroll;
+    padding-right: 17px;
 }
 
 .movie-top-container {
     padding: 30px 45px;
     row-gap: 4rem;
+
+    & .grid-table-btn {
+        width: 22px;
+        aspect-ratio: 1;
+
+        & svg {
+            aspect-ratio: 1;
+        }
+    }
 }
 
 header {
@@ -63,12 +102,12 @@ header {
         transition: opacity 0.5s linear;
         transition: transform 0.5s linear;
         transform: scale(1.05);
-    
+
         &:hover {
             transform: scale(1);
             opacity: 1;
         }
-    
+
         &:not(:hover) {
             opacity: 0.7;
         }
@@ -186,9 +225,11 @@ header {
         & ::-webkit-scrollbar {
             width: 10px;
         }
+
         & ::-webkit-scrollbar-thumb {
             background-color: #4b4b4b;
         }
+
         & ::-webkit-scrollbar-track {
             background-color: rgba(0, 0, 0, 0.822);
         }
@@ -197,9 +238,11 @@ header {
     & ::-webkit-scrollbar {
         width: 5px;
     }
+
     & ::-webkit-scrollbar-thumb {
         background-color: #919191;
     }
+
     & ::-webkit-scrollbar-track {
         background-color: rgba(71, 71, 71, 0.822);
     }
@@ -213,7 +256,7 @@ header {
     column-gap: 15px;
 }
 
-#movie-description{
+#movie-description {
     max-width: 900px;
 }
 
